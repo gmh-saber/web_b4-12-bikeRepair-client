@@ -23,12 +23,12 @@ const Services = () => {
             <Container>
                 <h5>What We Do</h5>
                 <h3>Services We Provide</h3>
-                <Row className="mt-5 justify-content-center">
+                <Row className="mt-5  d-flex justify-content-center">
                     {
                         services.length > 0 ?
                             services.slice(0, 3).map(service => <ServiceDetail key={service._id} service={service} />)
                             :
-                            <div className="m-auto">
+                            <div className="m-auto d-flex justify-content-center ">
                                 <img className='img-fluid' src={spinner} alt="..." />
                             </div>
                     }
