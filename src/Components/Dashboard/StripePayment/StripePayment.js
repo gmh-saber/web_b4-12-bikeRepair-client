@@ -66,7 +66,7 @@ const StripePayment = ({ orders }) => {
             time: new Date().toDateString('dd/mm/yyyy')
         };
 
-        fetch('http://localhost:5000/add-order', {
+        fetch('https://limitless-harbor-90447.herokuapp.com/add-order', {
             method: 'POST',
             headers: { 'Content-Type': 'Application/json' },
             body: JSON.stringify(bookingInfo)

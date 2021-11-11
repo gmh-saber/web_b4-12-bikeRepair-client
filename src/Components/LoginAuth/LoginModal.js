@@ -71,7 +71,7 @@ const LoginModal = () => {
         setShowModal(false);
         history.replace(from);
         toast.success('Successfully Logged In!');
-        if (res.email === "admin@test.gmail") {
+        if (res.email === "admin@admin.com") {
             swal({
                 title: "Warning!",
                 content: (
@@ -113,11 +113,11 @@ const LoginModal = () => {
                         <form onSubmit={handleSignIn(onSubmit)}>
                             <label>
                                 <span>Email</span>
-                                <input defaultValue="admin@test.gmail" {...registerSignIn("email", { required: true })} type="email" />
+                                <input defaultValue="admin@admin.com" {...registerSignIn("email", { required: true })} type="email" />
                             </label>
                             <label>
                                 <span>Password</span>
-                                <input defaultValue="admin111" {...registerSignIn("password", { required: true })} type="password" />
+                                <input defaultValue="123456" {...registerSignIn("password", { required: true })} type="password" />
                             </label>
                             <p className="forgot-pass">Forgot password?</p>
                             <Button type="submit" variant='info' className="submit">Sign In</Button>

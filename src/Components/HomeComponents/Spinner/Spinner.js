@@ -4,9 +4,9 @@ import spinner from '../../../images/loader.gif';
 
 const Spinner = () => {
     return (
-        <section className="vh-100 vw-100 d-flex justify-content-center align-items-center">
-        <Image src={spinner} />
-    </section>
+        <section className="w-100 d-flex justify-content-center align-items-center">
+            <Image src={spinner} />
+        </section>
     );
 };
 

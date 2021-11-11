@@ -14,7 +14,7 @@ const Review = () => {
         const loading = toast.loading('Uploading...Please wait!');
         data.img = photo || "https://i.ibb.co/5GzXkwq/user.png"
 
-        axios.post('http://localhost:5000/add-review', data)
+        axios.post('https://limitless-harbor-90447.herokuapp.com/add-review', data)
             .then(res => {
                 toast.dismiss(loading);
                 if (res.data) {

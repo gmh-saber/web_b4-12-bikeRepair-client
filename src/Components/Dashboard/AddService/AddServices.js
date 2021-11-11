@@ -24,7 +24,7 @@ const AddServices = () => {
 
         const loading = toast.loading('Adding...Please wait!');
 
-        const url = 'http://localhost:5000/add-services'
+        const url = 'https://limitless-harbor-90447.herokuapp.com/add-services'
         fetch(url, {
             method: 'POST',
             headers: {

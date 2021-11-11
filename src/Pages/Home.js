@@ -26,7 +26,7 @@ const Home = () => {
             <Partners />
             <Contact />
             <Footer />
-            <Copyright/>
+            <Copyright />
         </main>
     );
 };

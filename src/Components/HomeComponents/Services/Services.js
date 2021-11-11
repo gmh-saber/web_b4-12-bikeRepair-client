@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 import spinner from '../../../images/service-loder.gif';
 import ServiceDetail from '../ServiceDetail/ServiceDetail';
 import './Services.css';
@@ -10,7 +11,7 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/all-services')
+        axios.get('https://limitless-harbor-90447.herokuapp.com/all-services')
             .then(res => {
                 setServices(res.data);
             })
@@ -25,12 +26,15 @@ const Services = () => {
                 <Row className="mt-5 justify-content-center">
                     {
                         services.length > 0 ?
-                            services.map(service => <ServiceDetail key={service._id} service={service} />)
+                            services.slice(0, 3).map(service => <ServiceDetail key={service._id} service={service} />)
                             :
                             <div className="m-auto">
                                 <img className='img-fluid' src={spinner} alt="..." />
                             </div>
                     }
+                    <Link to="/services" className="btn btn-outline-info mx-auto w-25 rounded-pill my-5">
+                        See More
+                    </Link>
                 </Row>
             </Container>
         </section>

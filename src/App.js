@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import './App.css';
+import AllServices from "./Components/HomeComponents/AllServices/AllServices";
 import Spinner from "./Components/HomeComponents/Spinner/Spinner";
 import { getDecodedUser } from "./Components/LoginAuth/LoginManager";
 import NotFound from './Components/NotFound/NotFound';
@@ -27,7 +28,7 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+    axios.get(`https://limitless-harbor-90447.herokuapp.com/isAdmin?email=${loggedInUser?.email}`)
       .then(res => {
         setIsAdmin(res.data);
         setAdminLoading(false);
@@ -48,6 +49,9 @@ function App() {
             </Route>
             <PrivateRoute path='/dashboard/:panel'>
               <Dashboard adminLoading={adminLoading} />
+            </PrivateRoute>
+            <PrivateRoute path='/services'>
+              <AllServices />
             </PrivateRoute>
             <Route path='/login'>
               <Login />

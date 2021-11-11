@@ -14,7 +14,7 @@ const AllAdmin = () => {
 
 
     useEffect(() => {
-        axios.get('http://localhost:5000/all-admin')
+        axios.get('https://limitless-harbor-90447.herokuapp.com/all-admin')
             .then(res => {
                 setAdmins(res.data);
             })
@@ -36,7 +36,7 @@ const AllAdmin = () => {
             if (wantDelete) {
                 const loading = toast.loading('Deleting...Please wait!');
                 const removedAdmins = admins.filter(item => item._id !== id);
-                axios.delete(`http://localhost:5000/remove-admin/${id}`)
+                axios.delete(`https://limitless-harbor-90447.herokuapp.com/remove-admin/${id}`)
                     .then(res => {
                         toast.dismiss(loading);
                         if (res.data) {
