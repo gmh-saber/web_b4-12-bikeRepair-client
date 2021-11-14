@@ -30,7 +30,7 @@ const NavBar = () => {
           <Nav className="ml-auto text-center">
             <Nav.Link smooth as={HashLink} to="/home" className="mr-3"><strong>Home</strong></Nav.Link>
             <Nav.Link smooth as={HashLink} to="/home#about" className="mr-3"><strong>About</strong></Nav.Link>
-            <Nav.Link smooth as={HashLink} to="/home#service" className="mr-3"><strong>Service</strong></Nav.Link>
+            <Nav.Link smooth as={HashLink} to="/services" className="mr-3"><strong>All Service</strong></Nav.Link>
             <Nav.Link smooth as={HashLink} to="/home#blog" className="mr-3"><strong>Blogs</strong></Nav.Link>
             <Nav.Link smooth as={HashLink} to='/home#reviews' className="mr-3"><strong>Reviews</strong></Nav.Link>
             <Nav.Link smooth as={HashLink} to="/home#contact" className="mr-3"><strong>Contact</strong></Nav.Link>
