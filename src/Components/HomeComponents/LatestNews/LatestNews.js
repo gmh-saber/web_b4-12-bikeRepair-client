@@ -8,42 +8,42 @@ import './LatestNews.css';
 
 const LatestNews = () => {
 
-    const latestNews = [
-        {
-          id:1,
-          title: "New Bike Arrivals",
-          time: "March 15, 2021",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, tempora nihil...",
-          image: news1
-        },
-        {
-          id:2,
-          title: "Replace New Parts",
-          time: "March 17, 2021",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, tempora nihil...",
-          image: news2
-        },
-        {
-          id:3,
-          title: "Replace New Parts",
-          time: "March 17, 2021",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, tempora nihil...",
-          image: news3
-        }
-      ]
+  const latestNews = [
+    {
+      id: 1,
+      title: "New Experts Arrivals",
+      time: "March 15, 2021",
+      description: "We now have more bike experts ! ...",
+      image: news1
+    },
+    {
+      id: 2,
+      title: "Replace yor scilencer ",
+      time: "March 17, 2021",
+      description: "Silencer repair started in bike repair shop...",
+      image: news2
+    },
+    {
+      id: 3,
+      title: "Got 1st prize,,,,,",
+      time: "March 17, 2021",
+      description: "bike Repair shop got first prize in a compitition...",
+      image: news3
+    }
+  ]
 
-    return (
-          <section className='news-container' id='blog'>
-            <Container className="py-5">
-              <h3>Latest News From Our Blog</h3>
-              <Row className="mt-5">
-                  {
-                       latestNews.map(news => <SingleNews key={news.id} news={news} />)
-                  }
-              </Row>
-            </Container>
-         </section>
-    );
+  return (
+    <section className='news-container' id='blog'>
+      <Container className="py-5">
+        <h3>Latest News From Our Blog</h3>
+        <Row className="mt-5">
+          {
+            latestNews.map(news => <SingleNews key={news.id} news={news} />)
+          }
+        </Row>
+      </Container>
+    </section>
+  );
 };
 
 export default LatestNews;

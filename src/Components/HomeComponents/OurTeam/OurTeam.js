@@ -16,58 +16,58 @@ import "./OurTeam.css";
 import SingleMember from './SingleMember';
 
 
-SwiperCore.use([EffectCoverflow,Pagination]);
+SwiperCore.use([EffectCoverflow, Pagination]);
 
 const teamSlide = [
     {
-        id:1,
-        name: 'Entry Writer' ,
-        img:entry
+        id: 1,
+        name: 'Entry Writer',
+        img: entry
     },
     {
-        id:2,
-        name: 'Gear Expert' ,
-        img:gear
+        id: 2,
+        name: 'Gear Expert',
+        img: gear
     },
     {
-        id:3,
-        name: 'Helmet Expert' ,
-        img:helMate
+        id: 3,
+        name: 'Helmet Expert',
+        img: helMate
     },
     {
-        id:4,
-        name: 'Lilo Pistol Expert' ,
-        img:liloPistol
+        id: 4,
+        name: 'Lilo Pistol Expert',
+        img: liloPistol
     },
     {
-        id:5,
-        name: 'Print Expert' ,
-        img:paint
+        id: 5,
+        name: 'Print Expert',
+        img: paint
     },
     {
-        id:6,
-        name: 'Silencer Expert' ,
-        img:silencer
+        id: 6,
+        name: 'Silencer Expert',
+        img: silencer
     },
     {
-        id:7,
-        name: 'Sit cover Expert' ,
-        img:sitCover
+        id: 7,
+        name: 'Sit cover Expert',
+        img: sitCover
     },
     {
-        id:8,
-        name: 'Wheel Expert' ,
-        img:wheel
+        id: 8,
+        name: 'Wheel Expert',
+        img: wheel
     }
 ]
 
 const OurTeam = () => {
     return (
-       <section className="team-container" id="about">
-           <h3>Meet our Awesome team</h3>
-           <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, nulla! Lorem ipsum dolor sit</small></p>
-            <Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} loop={true}   
-             autoplay={{  delay: 2500, disableOnInteraction: false}} slidesPerView={'auto'} coverflowEffect={{
+        <section className="team-container" id="about">
+            <h3>Meet our Awesome team</h3>
+            <p><small>Lets meet our experts . we have some good teem men=mbers here.</small></p>
+            <Swiper effect={'coverflow'} grabCursor={true} centeredSlides={true} loop={true}
+                autoplay={{ delay: 2500, disableOnInteraction: false }} slidesPerView={'auto'} coverflowEffect={{
                     "rotate": 50,
                     "stretch": 0,
                     "depth": 100,
@@ -88,20 +88,20 @@ const OurTeam = () => {
                         spaceBetween: 10,
                     },
                 }}
-          >
+            >
                 {
-                        teamSlide.map(team => {
-                            return(
-                                <SwiperSlide  key={team.id}>
-                                    <SingleMember key={team.id} team={team} />
-                                </SwiperSlide>
-                            )
-                        })
+                    teamSlide.map(team => {
+                        return (
+                            <SwiperSlide key={team.id}>
+                                <SingleMember key={team.id} team={team} />
+                            </SwiperSlide>
+                        )
+                    })
                 }
-            
-          
+
+
             </Swiper>
-       </section>
+        </section>
     );
 };
 
