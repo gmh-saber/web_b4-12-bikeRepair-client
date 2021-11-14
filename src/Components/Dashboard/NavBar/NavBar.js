@@ -6,7 +6,7 @@ import ProfilePopper from '../../HomeComponents/ProfilePopper/ProfilePopper';
 const NavBar = ({ setShowSidebar, show }) => {
     const { panel } = useParams();
     return (
-        <Navbar className="border border-4 border-white rounded" expand="lg" variant="light" bg="warning">
+        <Navbar className="border border-5 border-info rounded " expand="lg" variant="light" bg="info">
             <Container fluid>
                 <button onClick={() => setShowSidebar(!show)} type="button" id="sidebarCollapse" className={show ? "navbar-btn active" : "navbar-btn"} >
                     <span></span>
@@ -15,7 +15,7 @@ const NavBar = ({ setShowSidebar, show }) => {
                 </button>
                 <Navbar.Brand>
                     <h2
-                        className="d-inline-block ml-md-3 mb-0"
+                        className="d-inline-block  ml-md-3 mb-0"
                         style={{ fontSize: "1.4rem", fontWeight: "600" }}>
                         {
                             panel === "profile" ? "Profile"

@@ -75,7 +75,7 @@ const StripePayment = ({ orders }) => {
             .then(data => {
                 if (data) {
                     toast.dismiss(loading);
-                    return swal("Successfully Ordered", ` ${loggedInUser.name} thank you for take ${orders.name} ....!!`, "success");
+                    return swal("Payment System Is Coming Soon", ` ${loggedInUser.name} thank you for take ${orders.name} ....!!`, "success");
                 };
             });
     };

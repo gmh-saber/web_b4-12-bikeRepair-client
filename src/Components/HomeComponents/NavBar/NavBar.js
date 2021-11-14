@@ -26,7 +26,7 @@ const NavBar = () => {
       <Container >
         <Navbar.Brand smooth as={HashLink} to="#home"  > <Image style={{ height: '33px', width: '43px' }} src={logo} /> <strong>Moto Repair</strong></Navbar.Brand>
         <Navbar.Toggle onClick={() => setCollapsed(!isCollapsed ? 'show' : null)} aria-controls="basic-navbar-nav" style={{ background: '#10bad4' }} />
-        <Navbar.Collapse id="navbar-nav" >
+        <Navbar.Collapse className="justify-content-end" id="navbar-nav" >
           <Nav className="ml-auto text-center">
             <Nav.Link smooth as={HashLink} to="/home" className="mr-3"><strong>Home</strong></Nav.Link>
             <Nav.Link smooth as={HashLink} to="/home#about" className="mr-3"><strong>About</strong></Nav.Link>

@@ -34,7 +34,7 @@ const SideBar = ({ show, adminLoading }) => {
                             </motion.li>
                             <motion.li whileHover={{ scale: 1.3, originX: 0, color: '#00000' }} transition={{ type: 'spring', stiffness: 1000 }}>
                                 <Link to="/dashboard/book-list" className={panel === "book-list" ? "link-active" : ""}>
-                                    <FontAwesomeIcon icon={faClipboardList} /> <span>Book List</span>
+                                    <FontAwesomeIcon icon={faClipboardList} /> <span>Order List</span>
                                 </Link>
                             </motion.li>
                             <motion.li whileHover={{ scale: 1.3, originX: 0, color: '#00000' }} transition={{ type: 'spring', stiffness: 1000 }}>
@@ -77,12 +77,8 @@ const SideBar = ({ show, adminLoading }) => {
                             </motion.li>
                         </>
                     }
-                    {/* <li className="list-unstyled back-button ">
-                        <Link to="/" className="back-home brn btn-info main-button">
-                            <FontAwesomeIcon icon={faSignOutAlt} /> Back to Home
-                        </Link>
-                    </li> */}
-                    <Link to="/services" className="btn btn-outline-primary position-absolute bottom-0 mb-3 rounded-pill">
+
+                    <Link to="/home" className="btn btn-outline-primary position-absolute bottom-0 mb-3 rounded-pill">
                         <FontAwesomeIcon icon={faSignOutAlt} /> Back to Home
                     </Link>
                 </ul >
