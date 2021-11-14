@@ -7,15 +7,15 @@ import './About.css';
 
 const About = () => {
     return (
-        <section className="about-container">
+        <section className="about-container bg-secondary">
             <Container>
                 <Row className="align-items-center justify-content-center banner">
                     <Col md={6}>
                         <Fade left>
-                            {/* <Image className="img-fluid" src={about} alt="..." /> */}
+                            <Image className="img-fluid border border-4 border-info rounded-pill" src='https://media.istockphoto.com/photos/people-are-repairing-a-motorcycle-picture-id1084092090?k=20&m=1084092090&s=612x612&w=0&h=1y3c0xE-ZEi4wkDrzciUv6DeU6K1LSuAPh8R9ZNwzHE=' alt="..." />
                         </Fade>
                     </Col>
-                    <Col md={6}>
+                    <Col className='bg-light shadow-lg border border-2 border-warning rounded p-5' md={6}>
                         <Fade right>
                             <h6 className="text-info">About Us</h6>
                             <h3>Why Choose Us For Repair ?</h3>
