@@ -27,7 +27,7 @@ const LatestNews = () => {
       id: 3,
       title: "Got 1st prize,,,,,",
       time: "March 17, 2021",
-      description: "bike Repair shop got first prize in a compitition...",
+      description: "shop got first prize in a compitition...",
       image: news3
     }
   ]
@@ -36,7 +36,7 @@ const LatestNews = () => {
     <section className='news-container' id='blog'>
       <Container className="py-5">
         <h3>Latest News From Our Blog</h3>
-        <Row className="mt-5">
+        <Row className="mt-5 border border-4 ">
           {
             latestNews.map(news => <SingleNews key={news.id} news={news} />)
           }
