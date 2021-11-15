@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import React from 'react';
 import { Col, Container, Image, Row } from 'react-bootstrap';
-import banner from '../../../images/banner-img.png';
 import './Banner.css';
 
 const Banner = () => {
