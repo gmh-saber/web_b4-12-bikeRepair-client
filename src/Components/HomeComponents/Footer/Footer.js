@@ -9,13 +9,13 @@ import './Footer.css';
 const Footer = () => {
 
     return (
-        <footer className="footer-container">
+        <footer className="footer-container bg-dark text-white">
             <Container>
                 <Row>
                     <Col md={6} lg={4} className="mt-2">
                         <div className="footer-link">
-                            <h3 style={{ color: '#404655' }}>Our Services</h3>
-                            <span className="animate-border border-black mb-3"></span>
+                            <h3 >Our Services</h3>
+                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
                             <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Bike cleaning and washing</span></Link>
                             <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Yearly bike inspection view</span></Link>
                             <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Bike repair and change service</span></Link>
@@ -25,8 +25,8 @@ const Footer = () => {
                     </Col>
                     <Col md={6} lg={4} className="mt-2">
                         <div>
-                            <h3 style={{ color: '#404655' }}>Our Support</h3>
-                            <span className="animate-border border-black mb-3"></span>
+                            <h3 >Our Support</h3>
+                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
                             <div className="footer-link">
                                 <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> How to get started?</span></Link>
                                 <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Frequently asked questions</span></Link>
@@ -38,8 +38,8 @@ const Footer = () => {
                     </Col>
                     <Col md={6} lg={4} className="mt-2">
                         <div>
-                            <h3 style={{ color: '#404655' }}>Social Links</h3>
-                            <span className="animate-border border-black mb-3"></span>
+                            <h3 >Social Links</h3>
+                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
                             <div className="footer-link">
                                 <a href='https://www.facebook.com/GmhSaber20' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span>Facebook</span></a>
                                 <a href='https://bd.linkedin.com/in/golam-muktadir-hossain-saber-1a770b1a9' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> LinkedIn</span></a>

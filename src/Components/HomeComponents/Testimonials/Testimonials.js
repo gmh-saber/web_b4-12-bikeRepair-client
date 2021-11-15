@@ -24,7 +24,7 @@ const Testimonials = () => {
             <div className="my-5 py-4">
                 <div className="review-title text-center">
                     <span>What Our Clients Says</span>
-                    <h3>Testimonials</h3>
+                    <h3>Reviews</h3>
                 </div>
                 <div>
                     {testimonials.length > 0 ?

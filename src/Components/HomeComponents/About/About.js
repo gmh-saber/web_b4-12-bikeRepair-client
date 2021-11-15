@@ -19,7 +19,7 @@ const About = () => {
                         <Fade right>
                             <h6 className="text-info">About Us</h6>
                             <h3>Why Choose Us For Repair ?</h3>
-                            <span className="animate-border border-black"></span>
+                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
                             <p className="text-muted mt-2"> <small>We have expert workers who cares about your bike . your bike our money. We afford best service in budget . we have specialiged garaz.   </small> </p>
                             <motion.button whileHover={{ scale: 1.1, textShadow: '0px 0px 8px rgb(255 255 255)', boxShadow: '0px 0px 8px #17a2b8', transition: { duration: 0.4, yoyo: 'Infinity' } }} className='main-button'>Learn More</motion.button>
                         </Fade>

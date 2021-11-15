@@ -35,7 +35,7 @@ const LatestNews = () => {
   return (
     <section className='news-container' id='blog'>
       <Container className="py-5">
-        <h3>Latest News From Our Blog</h3>
+        <h3>Blog's</h3>
         <Row className="mt-5 border border-4 ">
           {
             latestNews.map(news => <SingleNews key={news.id} news={news} />)
