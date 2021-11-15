@@ -1,9 +1,9 @@
 .header-container {
-  height: 100vh;
+  height: 90vh;
 }
 
 .header-container::after {
-  height: 100vh;
+  height: 50vh;
   content: " ";
   position: absolute;
   top: 0;

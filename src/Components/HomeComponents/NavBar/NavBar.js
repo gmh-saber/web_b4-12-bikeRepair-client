@@ -23,7 +23,7 @@ const NavBar = () => {
 
   return (
     <Navbar expand="lg" className={(isSticky || isCollapsed) ? "slide in py-2 show shadow-sm navbar navbar-expand-md bg-white navbar-light   fixed-top" : "slide out show navbar navbar-expand-nd navbar-light py-2 fixed-top "}>
-      <Container className='border border-3 border-info rounded-pill px-2 py-1' >
+      <Container className='border border-3 border-info rounded-pill  px-2 py-1' >
 
         <Navbar.Collapse className="justify-content-start" id="navbar-nav" >
           <Nav className="ml-auto text-center">
