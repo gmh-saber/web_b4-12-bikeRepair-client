@@ -22,7 +22,6 @@ const Home = () => {
             <Testimonials />
             <Contact />
             <Footer />
-            <Copyright />
         </main>
     );
 };

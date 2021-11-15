@@ -1,58 +1,59 @@
-import { faCheckCircle } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import './Footer.css';
-
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
+  return (
+    <div>
+      <div>
+        <div className="footer pt-5 pb-3">
+          <div className="container">
+            <div className=" ">
+              <div className="d-flex flex-column align-items-center justify-content-center  my-auto">
+                <Link
+                  className="navbar-brand text-light fw-bold fs-1"
+                  to="/home"
+                >
+                  <span className="text-info">Bike</span>Repair <br />
 
-    return (
-        <footer className="footer-container bg-dark text-white">
-            <Container>
-                <Row>
-                    <Col md={6} lg={4} className="mt-2">
-                        <div className="footer-link">
-                            <h3 >Our Services</h3>
-                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
-                            <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Bike cleaning and washing</span></Link>
-                            <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Yearly bike inspection view</span></Link>
-                            <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Bike repair and change service</span></Link>
-                            <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Bike selling and buying service</span></Link>
-                            <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Test driving and speed test</span></Link>
-                        </div>
-                    </Col>
-                    <Col md={6} lg={4} className="mt-2">
-                        <div>
-                            <h3 >Our Support</h3>
-                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
-                            <div className="footer-link">
-                                <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> How to get started?</span></Link>
-                                <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Frequently asked questions</span></Link>
-                                <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Customer testimonials</span></Link>
-                                <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Get a free quote</span></Link>
-                                <Link to='/' className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> Help & Support Center</span></Link>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col md={6} lg={4} className="mt-2">
-                        <div>
-                            <h3 >Social Links</h3>
-                            <hr className='w-25 text-info border border-2 rounded-pill border-info' />
-                            <div className="footer-link">
-                                <a href='https://www.facebook.com/GmhSaber20' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span>Facebook</span></a>
-                                <a href='https://bd.linkedin.com/in/golam-muktadir-hossain-saber-1a770b1a9' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> LinkedIn</span></a>
-                                <a href='https://github.com/GolamMuktadirHossainSaber' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span> GitHub</span></a>
-                                <a href='https://www.instagram.com/gmhsaber20/' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span>Instagram</span></a>
-                                <a href='https://twitter.com/GmhSaber20' target="-blank" className='d-block p-0 mb-4 item-link nav-link'><FontAwesomeIcon icon={faCheckCircle} /> <span>Twitter</span></a>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
-    );
+                </Link>
+                <h3 className="mt-3">Do You Need Help With Anything?</h3>
+                <p className="w-75 foot fs-6 text fs-4">
+                  Receive updates, hot deals, tutorials, discounts sent straignt
+                  in your inbox every month
+                </p>
+                <div className="input-group mb-3 w-75 fs-1">
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="Email Address"
+                    aria-label="Recipient's username"
+                    aria-describedby="basic-addon2"
+                  />
+                  <NavLink to="/commingSoon">
+                    <span
+                      className="input-group-text btn btn-travel rounded-start border-start-0"
+                      id="basic-addon2"
+                    >
+                      Subscribe
+                    </span>
+                  </NavLink>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div className="footerText">
+            <p className="text-center mt-5">
+              © 2021 <span className="text-info">Bike</span>Repair
+              {/* <span className="color-pink">...</span> Designd By{" "}
+              <span className="color-pink">GMH SABER</span>. */}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
