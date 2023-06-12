@@ -1,25 +1,19 @@
 import axios from "axios";
 import { createContext, lazy, Suspense, useEffect, useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
-import {
-  BrowserRouter as Router,
-  Route, Switch
-} from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 import AllServices from "./Components/HomeComponents/AllServices/AllServices";
 import Spinner from "./Components/HomeComponents/Spinner/Spinner";
 import { getDecodedUser } from "./Components/LoginAuth/LoginManager";
-import NotFound from './Components/NotFound/NotFound';
-import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
-const Dashboard = lazy(() => import('./Pages/Dashboard'));
-const Home = lazy(() => import('./Pages/Home'));
-const Login = lazy(() => import('./Pages/Login'));
-
-
+import NotFound from "./Components/NotFound/NotFound";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+const Dashboard = lazy(() => import("./Pages/Dashboard"));
+const Home = lazy(() => import("./Pages/Home"));
+const Login = lazy(() => import("./Pages/Login"));
 
 export const UserContext = createContext();
-
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState(getDecodedUser());
@@ -28,38 +22,45 @@ function App() {
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    axios.get(`https://limitless-harbor-90447.herokuapp.com/isAdmin?email=${loggedInUser?.email}`)
-      .then(res => {
+    axios
+      .get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+      .then((res) => {
         setIsAdmin(res.data);
         setAdminLoading(false);
       })
-      .catch(error => toast.error(error.message))
+      .catch((error) => toast.error(error.message));
   }, [loggedInUser?.email]);
 
-
   return (
-    <UserContext.Provider value={{ loggedInUser, setLoggedInUser, isAdmin, selectedService, setSelectedService }}>
-
+    <UserContext.Provider
+      value={{
+        loggedInUser,
+        setLoggedInUser,
+        isAdmin,
+        selectedService,
+        setSelectedService,
+      }}
+    >
       <Router>
         <Toaster />
         <Suspense fallback={<Spinner />}>
           <Switch>
-            <Route path='/home'>
+            <Route path="/home">
               <Home />
             </Route>
-            <PrivateRoute path='/dashboard/:panel'>
+            <PrivateRoute path="/dashboard/:panel">
               <Dashboard adminLoading={adminLoading} />
             </PrivateRoute>
-            <PrivateRoute path='/services'>
+            <PrivateRoute path="/services">
               <AllServices />
             </PrivateRoute>
-            <Route path='/login'>
+            <Route path="/login">
               <Login />
             </Route>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route path='*'>
+            <Route path="*">
               <NotFound />
             </Route>
           </Switch>
