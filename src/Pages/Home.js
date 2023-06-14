@@ -4,7 +4,6 @@ import Benefits from "../Components/HomeComponents/Benefits/Benefits";
 import Contact from "../Components/HomeComponents/Contact/Contact";
 import Copyright from "../Components/HomeComponents/Footer/Copyright";
 import Footer from "../Components/HomeComponents/Footer/Footer";
-import Header from "../Components/HomeComponents/Header/Header";
 import LatestNews from "../Components/HomeComponents/LatestNews/LatestNews";
 import OurTeam from "../Components/HomeComponents/OurTeam/OurTeam";
 import Services from "../Components/HomeComponents/Services/Services";
@@ -16,9 +15,9 @@ const Home = () => {
   return (
     <main>
       <NavBar />
-      <Header />
-      <Services />
+      <Banner />
       <About />
+      <Services />
       <OurTeam />
       <LatestNews />
       <Benefits />

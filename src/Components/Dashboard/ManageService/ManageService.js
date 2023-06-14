@@ -40,14 +40,14 @@ const ManageService = () => {
   const handleUpdateService = (id) => {
     if (restrictPermission(id)) {
       return swal(
-        "Permission restriction!",
+        "Permission restricted!",
         "As a test-admin, you don't have permission to update 6 core services. But you can update your added services.",
         "info"
       );
     } else {
       return swal(
-        "Permission restriction!",
-        "This feature will coming soon...",
+        "Permission restricted!",
+        "This feature is coming soon...",
         "info"
       );
     }

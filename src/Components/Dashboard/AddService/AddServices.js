@@ -49,7 +49,7 @@ const AddServices = () => {
 
   const handleImageUpload = (event) => {
     const imageData = new FormData();
-    imageData.set("key", "dbe52342656cdfcd177dc7e9307e81c4");
+    imageData.set("key", "c6894bf2af3a1421ba14e522cfb3ab91");
     imageData.append("image", event.target.files[0]);
     const loading = toast.loading("Uploading...Please wait!");
 

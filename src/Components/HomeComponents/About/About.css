@@ -1,6 +1,6 @@
 .about-container {
   height: 100vh;
-  /* : url("../../../images/about-section-bg.png"); */
+  background-image: ("../../../images/about-section-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,52 +1,113 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { Carousel, Col, Container, Image, Row } from "react-bootstrap";
-import "./Banner.css";
+import "swiper/components/effect-coverflow/effect-coverflow.min.css";
+import "swiper/components/pagination/pagination.min.css";
+import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.min.css";
+import entry from "../../../images/b1.jpg";
+import gear from "../../../images/b7.jpg";
+import helMate from "../../../images/b3.jpg";
+import liloPistol from "../../../images/b4.jpg";
+import paint from "../../../images/b5.jpg";
+import silencer from "../../../images/b6.jpg";
+import sitCover from "../../../images/b2.jpg";
+import wheel from "../../../images/b8.jpg";
+import SingleMember from "../OurTeam/SingleMember";
 
-const Banner = () => {
+SwiperCore.use([EffectCoverflow, Pagination]);
+
+const teamSlide = [
+  {
+    id: 1,
+
+    img: entry,
+  },
+  {
+    id: 2,
+
+    img: gear,
+  },
+  {
+    id: 3,
+
+    img: helMate,
+  },
+  {
+    id: 4,
+
+    img: liloPistol,
+  },
+  {
+    id: 5,
+
+    img: paint,
+  },
+  {
+    id: 6,
+
+    img: silencer,
+  },
+  {
+    id: 7,
+
+    img: sitCover,
+  },
+  {
+    id: 8,
+
+    img: wheel,
+  },
+];
+
+const Baner = () => {
   return (
-    <motion.section className="h" id="home">
-      <Carousel variant="dark">
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://media.istockphoto.com/photos/motorbike-repair-shop-picture-id654376016?k=20&m=654376016&s=612x612&w=0&h=7rhtUYc0oOf2mS14mhbg0cWNMslRf7NzacFhuFioOlc="
-            alt="First slide"
-          />
-          {/* <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption> */}
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://media.istockphoto.com/photos/mechanic-repairing-customized-motorcycle-picture-id1019948816?k=20&m=1019948816&s=612x612&w=0&h=JS_Arw9YW3D_hM6eF8QY2KF4uktQZiIpnAmiqZ1WWuQ="
-            alt="Second slide"
-          />
-          {/* <Carousel.Caption>
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption> */}
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://media.istockphoto.com/photos/this-bike-will-be-perfect-picture-id614415432?k=20&m=614415432&s=612x612&w=0&h=pxoABtoInMevUnC08h4rlbBVqc-5q1f4Pv4JW37SfAI="
-            alt="Third slide"
-          />
-          {/* <Carousel.Caption>
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption> */}
-        </Carousel.Item>
-      </Carousel>
-    </motion.section>
+    <section className="team-container" id="about">
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        loop={true}
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 2,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+        }}
+      >
+        {teamSlide.map((team) => {
+          return (
+            <SwiperSlide key={team.id}>
+              <SingleMember key={team.id} team={team} />
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+      <h3 className="mt-5">Your Bike, Our responsebility</h3>
+      <p>
+        <small>
+          Lets meet our experts . we have some good teem members here.
+        </small>
+      </p>
+    </section>
   );
 };
 
-export default Banner;
-
-{
-  /*  */
-}
+export default Baner;

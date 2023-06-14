@@ -23,10 +23,13 @@ const SideBar = ({ show, adminLoading }) => {
   const { panel } = useParams();
   return (
     <nav id="sidebar" className={show ? "active" : ""}>
-      <div className="sidebar-header">
-        <Image className="d-inline-block mx-2 image" src={logo} alt="..." />
-        <h4 className="d-inline-block">Moto Repair</h4>
-      </div>
+      <Link to="/home">
+        <div className="sidebar-header">
+          <Image className="d-inline-block mx-2 image" src={logo} alt="..." />
+          <h4 className="d-inline-block">Moto Repair</h4>
+        </div>
+      </Link>
+
       {adminLoading ? (
         <SideBarSpinner />
       ) : (
