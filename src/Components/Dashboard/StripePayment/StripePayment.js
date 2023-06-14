@@ -69,7 +69,7 @@ const StripePayment = ({ orders }) => {
       time: new Date().toDateString("dd/mm/yyyy"),
     };
 
-    fetch("http://localhost:5000/add-order", {
+    fetch("https://bike-repair.onrender.com/add-order", {
       method: "POST",
       headers: { "Content-Type": "Application/json" },
       body: JSON.stringify(bookingInfo),

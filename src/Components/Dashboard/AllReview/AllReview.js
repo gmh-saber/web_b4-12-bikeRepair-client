@@ -16,7 +16,7 @@ const AllReview = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-review")
+      .get("https://bike-repair.onrender.com/all-review")
       .then((res) => {
         setReviews(res.data);
       })
@@ -43,7 +43,7 @@ const AllReview = () => {
         const loading = toast.loading("Deleting...Please wait!");
         const removedReviews = reviews.filter((item) => item._id !== id);
         axios
-          .delete(`http://localhost:5000/delete-review/${id}`)
+          .delete(`https://bike-repair.onrender.com/delete-review/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

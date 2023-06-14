@@ -1,4 +1,4 @@
-// import spinner from '../../../images/service-loder.gif';
+import spinner from "../../../images/service-loder.gif";
 import "./AllServices.css";
 
 import axios from "axios";
@@ -13,7 +13,7 @@ const AllServices = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-services")
+      .get("https://bike-repair.onrender.com/all-services")
       .then((res) => {
         setServices(res.data);
       })
@@ -24,7 +24,7 @@ const AllServices = () => {
     <div>
       <NavBar></NavBar>
       <section className="services" id="services">
-        <Container>
+        <Container className="bg-white">
           <h5>What We Do</h5>
           <h3>Services We Provide</h3>
           <Row className="mt-5 justify-content-center">
@@ -33,9 +33,7 @@ const AllServices = () => {
                 <ServiceDetail key={service._id} service={service} />
               ))
             ) : (
-              <div className="m-auto">
-                {/* <img className='img-fluid' src={spinner} alt="..." /> */}
-              </div>
+              <img className="w-25" src={spinner} alt="..." />
             )}
           </Row>
         </Container>

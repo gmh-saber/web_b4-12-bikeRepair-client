@@ -39,7 +39,7 @@ const Book = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-services")
+      .get("https://bike-repair.onrender.com/all-services")
       .then((res) => setServices(res.data))
       .catch((error) => toast.error(error.message));
   }, []);
@@ -111,12 +111,11 @@ const Book = () => {
         </div>
 
         <Toast
-          className="toast-right"
-          style={{ marginLeft: "auto" }}
+          className="toast-center"
+          style={{ margin: "auto" }}
           onClose={() => setShow(false)}
           show={show}
-          delay={5000}
-          autohide
+          delay={10000}
         >
           <Toast.Header>
             <img src={infoEmojis} className="rounded mr-2" alt="Info" />

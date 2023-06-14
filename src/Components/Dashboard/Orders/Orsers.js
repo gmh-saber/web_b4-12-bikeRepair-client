@@ -29,7 +29,10 @@ const BookList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/orderedByEmail?email=" + loggedInUser.email)
+      .get(
+        "https://bike-repair.onrender.com/orderedByEmail?email=" +
+          loggedInUser.email
+      )
       .then((res) => {
         setOrders(res.data);
       })
@@ -56,7 +59,7 @@ const BookList = () => {
         const loading = toast.loading("Deleting...Please wait!");
         const removedServices = orders.filter((item) => item._id !== id);
         axios
-          .delete(`http://localhost:5000/cancel-order/${id}`)
+          .delete(`https://bike-repair.onrender.com/cancel-order/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

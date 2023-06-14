@@ -22,7 +22,7 @@ const AddAdmin = () => {
     }
     const loading = toast.loading("Adding...Please wait!");
     axios
-      .post("http://localhost:5000/add-admin", data)
+      .post("https://bike-repair.onrender.com/add-admin", data)
       .then((res) => {
         reset();
         toast.dismiss(loading);

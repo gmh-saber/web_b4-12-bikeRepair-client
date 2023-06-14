@@ -12,7 +12,7 @@ const Services = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-services")
+      .get("https://bike-repair.onrender.com/all-services")
       .then((res) => {
         setServices(res.data);
       })

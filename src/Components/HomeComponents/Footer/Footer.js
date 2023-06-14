@@ -15,14 +15,13 @@ const Footer = () => {
                   to="/home"
                 >
                   <span className="text-info">Bike</span>Repair <br />
-
                 </Link>
-                <h3 className="mt-3">Do You Need Help With Anything?</h3>
+                <h3 className="mt-3">Need Help With Anything?</h3>
                 <p className="w-75 foot fs-6 text fs-4">
                   Receive updates, hot deals, tutorials, discounts sent straignt
                   in your inbox every month
                 </p>
-                <div className="input-group mb-3 w-75 fs-1">
+                <div className="input-group mx-auto mb-3 w-75 fs-1">
                   <input
                     type="text"
                     className="form-control"
@@ -30,25 +29,17 @@ const Footer = () => {
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                   />
-                  <NavLink to="/commingSoon">
-                    <span
-                      className="input-group-text btn btn-travel rounded-start border-start-0"
-                      id="basic-addon2"
-                    >
-                      Subscribe
-                    </span>
-                  </NavLink>
                 </div>
+                <NavLink to="/commingSoon">
+                  <span
+                    className="input-group-text btn btn-travel bg-primary text-white rounded-start border-start-0"
+                    id="basic-addon2"
+                  >
+                    Subscribe
+                  </span>
+                </NavLink>
               </div>
-
             </div>
-          </div>
-          <div className="footerText">
-            <p className="text-center mt-5">
-              © 2021 <span className="text-info">Bike</span>Repair
-              {/* <span className="color-pink">...</span> Designd By{" "}
-              <span className="color-pink">GMH SABER</span>. */}
-            </p>
           </div>
         </div>
       </div>

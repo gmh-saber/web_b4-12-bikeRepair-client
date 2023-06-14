@@ -9,7 +9,7 @@ const OrderList = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/all-orders`)
+      .get(`https://bike-repair.onrender.com/all-orders`)
       .then((res) => {
         setOrders(res.data);
       })
@@ -30,7 +30,10 @@ const OrderList = () => {
     const loading = toast.loading("Updating....Please wait!");
 
     axios
-      .patch("http://localhost:5000/update-order-status", modifiedStatus)
+      .patch(
+        "https://bike-repair.onrender.com/update-order-status",
+        modifiedStatus
+      )
       .then((res) => {
         toast.dismiss(loading);
         if (res.data) {

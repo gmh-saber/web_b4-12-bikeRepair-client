@@ -16,7 +16,7 @@ const ManageService = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-services")
+      .get("https://bike-repair.onrender.com/all-services")
       .then((res) => {
         setServices(res.data);
       })
@@ -73,7 +73,7 @@ const ManageService = () => {
         const loading = toast.loading("Deleting...Please wait!");
         const removedServices = services.filter((item) => item._id !== id);
         axios
-          .delete(`http://localhost:5000/service-delete/${id}`)
+          .delete(`https://bike-repair.onrender.com/service-delete/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

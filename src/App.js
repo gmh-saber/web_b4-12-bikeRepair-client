@@ -23,7 +23,9 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/isAdmin?email=${loggedInUser?.email}`)
+      .get(
+        `https://bike-repair.onrender.com/isAdmin?email=${loggedInUser?.email}`
+      )
       .then((res) => {
         setIsAdmin(res.data);
         setAdminLoading(false);

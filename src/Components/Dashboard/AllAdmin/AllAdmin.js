@@ -16,7 +16,7 @@ const AllAdmin = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/all-admin")
+      .get("https://bike-repair.onrender.com/all-admin")
       .then((res) => {
         setAdmins(res.data);
       })
@@ -43,7 +43,7 @@ const AllAdmin = () => {
         const loading = toast.loading("Deleting...Please wait!");
         const removedAdmins = admins.filter((item) => item._id !== id);
         axios
-          .delete(`http://localhost:5000/remove-admin/${id}`)
+          .delete(`https://bike-repair.onrender.com/remove-admin/${id}`)
           .then((res) => {
             toast.dismiss(loading);
             if (res.data) {

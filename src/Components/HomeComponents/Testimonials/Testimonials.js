@@ -12,7 +12,7 @@ const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-review")
+    fetch("https://bike-repair.onrender.com/all-review")
       .then((res) => res.json())
       .then((data) => setTestimonials(data))
       .catch((error) => toast.error(error.message));

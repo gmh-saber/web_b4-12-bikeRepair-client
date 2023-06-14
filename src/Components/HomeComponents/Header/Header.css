@@ -3,7 +3,7 @@
 }
 
 .header-container::after {
-  height: 50vh;
+  height: 20vh;
   content: " ";
   position: absolute;
   top: 0;
